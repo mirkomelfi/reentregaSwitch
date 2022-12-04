@@ -4,19 +4,10 @@ import { StyleSheet, Text, View } from 'react-native';
 import Header from './components/Header';
 import GameScreen from './screens/GameScreen';
 import StartGameScreen from './screens/StartGameScreen';
-import { useFonts } from 'expo-font';
+
 
 
 export default function App() {
-  
-  const [userNumber,setUserNumber]=useState();
-  const [loaded]=useFonts({
-    Sono:require("./assets/fonts/Sono/Sono-Medium.ttf")
-  })
-  const handlerStartGame=(selectedNumber)=> {
-    setUserNumber(selectedNumber);
-  };
-
 
   let content=<StartGameScreen onStartGame={handlerStartGame} />
   
